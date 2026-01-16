@@ -1,5 +1,8 @@
 # Radar Streamlit Demo (Demo → Real Radar → VEX Control)
+
 [Link to Notion](https://www.notion.so/Radar-Streamlit-Demo-2ea3e03f1fae809d9f0fec067eb1c876?source=copy_link)
+
+
 Streamlit application for teaching radar-based gesture classification using:
 - **Demo (Synthetic)** radar stream (works on macOS + Windows)
 - **Teachable Machine (Keras)** model inference (`keras_model.h5` + `labels.txt`)
