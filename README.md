@@ -1,9 +1,40 @@
-# Radar Streamlit Demo (Sprint 1)
+# Radar Streamlit Demo (Demo → Real Radar → VEX Control)
 
-This is a demo-mode Streamlit app that simulates radar micro-Doppler data, shows a live spectrogram, and collects labeled samples as axis-free PNG images for Teachable Machine.
+Streamlit application for teaching radar-based gesture classification using:
+- **Demo (Synthetic)** radar stream (works on macOS + Windows)
+- **Teachable Machine (Keras)** model inference (`keras_model.h5` + `labels.txt`)
+- **Virtual VEX robot** grid simulator
+- **Real Radar (Windows-only)** scaffold for Infineon **BGT60TR13C** (Sprint 3.x+)
 
-## Setup (Mac)
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
+---
+
+## Current Status (Sprint 3.0)
+
+✅ Demo spectrogram + sample capture  
+✅ Teachable Machine model loading + inference  
+✅ Virtual robot moves from predictions  
+🧩 Real radar tab is scaffolded (Windows-only; no SDK import on macOS)
+
+---
+
+## Project Structure (expected)
+
+```text
+radar_streamlit_demo/
+  app.py
+  src/
+    __init__.py
+    signal_processing.py
+    storage.py
+    virtual_robot.py
+    streams/
+      __init__.py
+      demo_stream.py
+      # real_stream.py  (Sprint 3.1+)
+  models/
+    keras_model.h5        (optional; do not commit)
+    labels.txt            (optional; do not commit)
+  data/                   (generated; do not commit)
+  requirements.txt
+  .gitignore
+  README.md
